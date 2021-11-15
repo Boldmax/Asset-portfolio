@@ -1,0 +1,61 @@
+#####
+
+POST http://localhost:6000/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"shares@gmail.com",
+    "password":"memoryverse"
+}
+
+#######
+
+POST http://localhost:6000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "09876543212",
+    "email":"shares@gmail.com",
+    "password":"memoryverse"
+}
+
+#######
+
+PUT http://localhost:6000/api/users/6190178608e75b298c3e8607
+Content-Type: application/json
+
+{
+    "desc":"Lorem ipsium tomato juice specifically plantain willingly proemodial artificial removal excavation disection plunbin combination",
+    "userId": "6190178608e75b298c3e8607"
+}
+
+
+######### POST API
+
+PUT http://localhost:6000/api/posts/619157e4204dfd50249f7d2e
+Content-Type: application/json
+
+{
+    "desc":"Lorem ipsium tomato juice specifically plantain willingly proemodial artificial removal excavation disection plunbin combination",
+    "userId": "6190178608e75b298c3e8607"
+}
+
+########
+
+POST http://localhost:6000/api/posts/
+Content-Type: application/json
+
+{
+    "desc":"Willingly oriental proemodial artificial removal excavation disection plunbin",
+    "userId": "6190178608e75b298c3e8607"
+}
+
+########
+
+DELETE  http://localhost:6000/api/posts/619157e4204dfd50249f7d2e
+Content-Type: application/json
+
+{
+    "userId": "6190178608e75b298c3e8607"
+}
+
