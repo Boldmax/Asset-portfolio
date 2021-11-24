@@ -1,0 +1,51 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+ /*  background: url(../images/home.jpg) no-repeat;
+  background-size: cover;
+  background-position: center; */
+  background-color: var(--background-color);
+}
+
+.home .content {
+  display: block;
+  max-width: 70rem;
+  margin: auto;
+}
+
+.home .content h3 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.home .content p {
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: var(--color-dark);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .header .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
+  .home {
+    background-position: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home .content h3 {
+    font-size: 4.5rem;
+  }
+
+  .home .content p {
+    font-size: 1.5rem;
+  }
+}

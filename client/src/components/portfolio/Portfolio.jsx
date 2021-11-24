@@ -1,19 +1,49 @@
-import "./Main.css";
+import "./Portfolio.css";
 import { BiLineChart } from "react-icons/bi";
 import { FiBarChart2 } from "react-icons/fi";
 import { AiOutlineRise } from "react-icons/ai";
-import dataSet from "./orders";
+import dataSet from "../Order/orders";
 
 const Main = () => {
     return (
         <main>
-            <h1>Portfolio overview</h1>
-{/* 
-            <div className="date">
+            <h1>Portfolio</h1>
+
+            {/*      <div className="date">
                 <input type="date" />
             </div> */}
 
-            <div className="insights">
+            <div className="recent-orders">
+                <h2>Transaction history</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Number</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        {dataSet.map((data, index) => {
+
+                            return <tr key={index}>
+                                <td>{data.productName}</td>
+                                <td>{data.productNumber}</td>
+                                <td>{data.shipping}</td>
+                                <td className="warning">{data.shipping}</td>
+                                <td className="primary">Details</td>
+                            </tr>
+                        })}
+                    </tbody>
+
+                </table>
+
+                <a href="#">Show All</a>
+            </div>
+
+            <div className="analytics">
                 <div className="sales">
                     <span className="icon"><BiLineChart /></span>
                     <div className="middle">
@@ -51,28 +81,8 @@ const Main = () => {
                     </div>
                     <small className="text-muted">Last 24 Hours</small>
                 </div>
-                {/*    END OF EXPENSES  */}
-                {/*                 <div className="income">
-                    <span className="icon"><AiOutlineRise /></span>
-                    <div className="middle">
-                        <div className="left">
-                            <h3>Total Income</h3>
-                            <h1>$10,864</h1>
-                        </div>
-                        <div className="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div className="number">
-                                <p>44%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small className="text-muted">Last 24 Hours</small>
-                </div> */}
-                {/* ------------ END OF INCOME -------------- */}
             </div>
-            {/* ------------ END OF INSIGHTS -------------- */}
+
 
             <div className="recent-orders">
                 <h2>Transaction history</h2>
@@ -81,8 +91,8 @@ const Main = () => {
                         <tr>
                             <th>Product Name</th>
                             <th>Product Number</th>
-                            {/* <th>Payment</th> */}
-                            {/* <th>Status</th> */}
+                            <th>Payment</th>
+                            <th>Status</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -90,11 +100,11 @@ const Main = () => {
                         {dataSet.map((data, index) => {
 
                             return <tr key={index}>
-                                <td className="primary">{data.productName}</td>
-                                <td className="warning">{data.productNumber}</td>
-                                {/* <td>{data.shipping}</td> */}
-                                {/* <td className="warning">{data.shipping}</td>
-                                <td className="primary">Details</td> */}
+                                <td>{data.productName}</td>
+                                <td>{data.productNumber}</td>
+                                <td>{data.shipping}</td>
+                                <td className="warning">{data.shipping}</td>
+                                <td className="primary">Details</td>
                             </tr>
                         })}
                     </tbody>

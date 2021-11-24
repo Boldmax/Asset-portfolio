@@ -1,0 +1,128 @@
+.donation {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-image: var(--color-general);
+  border-radius: 20px 1px 20px 1px;
+  left: 30%;
+  top: 15%;
+  width: 35%;
+  z-index: 100;
+}
+
+.donation.active {
+  top: -100%;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.topbar img {
+  padding: 15px 0;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.donation .topbar,
+.donation .botomBar {
+  height: 3.5rem;
+  background-image: var(--color-general);
+  width: 100%;
+  border-radius: 20px 1px 20px 1px;
+}
+
+.donation .donation-box form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.donation .donation-box input,
+.donation .donation-box select {
+  width: 70%;
+  margin: 15px;
+  height: 2.5rem;
+  border: none;
+  font-size: 1rem;
+  padding: 13px;
+  padding-left: 1rem;
+  border-radius: 10px 0px 10px 0px;
+  outline: none;
+}
+
+.donation .donation-box select option {
+  width: 20rem;
+  background-color: var(--themeRed);
+}
+
+.donation .donation-box form button {
+  margin: 2rem auto;
+  border-radius: 10px 0px 10px 0px;
+  outline: none;
+  padding: 10px;
+  width: 70%;
+}
+
+.donation .donation-box form button:hover {
+  background-color: aqua;
+}
+
+.botomBar {
+  display: flex;
+  font-size: 1rem;
+  color: var(--color-dark);
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 1px 20px 1px;
+}
+
+.donation .donation-box h3 {
+  display: block;
+  width: 70%;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.topbar .times {
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
+.topbar .times:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .donation {
+    width: 50%;
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .donation {
+    left: 10%;
+    top: 15%;
+    width: 80%;
+    transition: 0.5s;
+  }
+
+  .donation .donation-box h3 {
+    font-size: 0.8rem;
+  }
+
+  .topbar .times {
+    display: flex;
+    margin: 20px;
+    font-size: 1.5rem;
+    justify-content: flex-end;
+  }
+
+  .donation.active {
+    top: -145%;
+  }
+}

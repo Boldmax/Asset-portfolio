@@ -1,0 +1,149 @@
+.volunteer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: #fff;
+  border-radius: 20px 1px 20px 1px;
+  left: 30%;
+  top: 8%;
+  width: 35%;
+  z-index: 100;
+}
+
+.volunteer.active {
+  left: -100%;
+  z-index: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.topbar img {
+  padding: 15px;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.volunteer .topbar,
+.botomBar {
+  height: 3.5rem;
+  background-color: var(--themeRed);
+  width: 100%;
+  border-radius: 20px 1px 20px 1px;
+}
+
+.volunteer .volunteer-box form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.volunteer .volunteer-box input,
+.volunteer .volunteer-box select {
+  width: 70%;
+  margin: 10px;
+  height: 2.5rem;
+  border: 2px solid #000;
+  font-size: 1rem;
+  padding-left: 1rem;
+  border-radius: 20px 1px 20px 1px;
+  outline: none;
+}
+
+.volunteer .volunteer-box select option {
+  width: 20rem;
+  background-color: var(--themeRed);
+}
+
+.volunteer .volunteer-box form button {
+  width: 70%;
+  margin: 2rem auto;
+  border-radius: 20px 1px 20px 1px;
+  outline: none;
+  padding: 13px;
+}
+
+.botomBar {
+  display: flex;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 1px 20px 1px;
+}
+
+.volunteer .volunteer-box h3 {
+  display: block;
+  width: 70%;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.topbar .times {
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
+.topbar .times:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .volunteer {
+    width: 50%;
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .volunteer {
+    left: 10%;
+    top: 5%;
+    width: 80%;
+    transition: 0.5s;
+  }
+
+  .volunteer .volunteer-box h3 {
+    font-size: 0.8rem;
+  }
+
+  .topbar .times {
+    display: flex;
+    margin: 20px;
+    font-size: 1.5rem;
+    justify-content: flex-end;
+  }
+
+  .volunteer.active {
+    left: -180%;
+  }
+
+  .volunteer .volunteer-box input,
+  .volunteer .volunteer-box select {
+    margin: 8px;
+    font-size: 0.8rem;
+    height: 2.1rem;
+  }
+
+  
+}
+
+@media screen and (max-width: 360px) {
+  .volunteer.active {
+    left: -120%;
+  }
+
+  .volunteer .volunteer-box input,
+  .volunteer .volunteer-box select {
+    margin: 5px;
+    font-size: 0.8rem;
+  }
+
+  .volunteer .volunteer-box form button {
+    margin: 1.2rem auto;
+  }
+}

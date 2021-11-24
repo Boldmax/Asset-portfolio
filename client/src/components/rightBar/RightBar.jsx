@@ -1,28 +1,20 @@
 import "./RightBar.css";
-import { BsBagDashFill, BsFillCartFill, BsFillPersonFill, BsFillSunFill, BsFillMoonFill, BsFillGridFill } from "react-icons/bs";
+import { BsBagDashFill, BsFillCartFill, BsFillPersonFill, BsFillSunFill, BsFillMoonFill, BsFillGridFill, BsPlus } from "react-icons/bs";
 import avatar from "../images/profile-1.jpg";
 import profile1 from "../images/profile-2.jpg"
 import profile2 from "../images/profile-3.jpg"
 import profile3 from "../images/profile-4.jpg"
+import { BiPlus } from "react-icons/bi";
 
-const RightBar = ({ toggler, theme }) => {
-
-    let themeClass1 = [" "];
-    theme ? themeClass1.push("active") : themeClass1.join(" ")
-
-    let themeClass2 = [" "];
-    !theme ? themeClass2.push("active") : themeClass2.join(" ")
+const RightBar = ({ navShow }) => {
 
     return (
         <div className="right">
             <div className="top">
                 <button id="menu-btn">
-                    <span ><BsFillGridFill /></span>
+                    <span onClick={navShow} ><BsFillGridFill /></span>
                 </button>
-                <div className="theme-toggler">
-                    <span className={themeClass1.join(" ")} onClick={toggler} ><BsFillSunFill /></span>
-                    <span className={themeClass2.join(" ")} onClick={toggler} ><BsFillMoonFill /></span>
-                </div>
+
                 <div className="profile">
                     <div className="info">
                         <p>Hey, <b>Daniel</b></p>
@@ -119,7 +111,7 @@ const RightBar = ({ toggler, theme }) => {
                 </div>
                 <div className="item add-product">
                     <div>
-                        <span className="material-icons-sharp">add</span>
+                        <span ><BiPlus /></span>
                         <h3>Add Product</h3>
                     </div>
                 </div>
